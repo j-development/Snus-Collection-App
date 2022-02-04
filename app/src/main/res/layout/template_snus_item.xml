@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="snusDataVariable"
+            type="android.example.snuscollectorapp.models.Snus" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/border_bottom"
+        android:padding="15dp">
+
+        <TextView
+            android:id="@+id/NameLabel"
+            style="@style/snusLabelStyles"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-black"
+            android:text="@string/NameLabelString"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/CompanyLabel"
+            style="@style/snusLabelStyles"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="@string/SnusTypeLabelString"
+            app:layout_constraintStart_toStartOf="@+id/SizeLabel"
+            app:layout_constraintTop_toBottomOf="@+id/SizeLabel" />
+
+        <TextView
+            android:id="@+id/SizeLabel"
+            style="@style/snusLabelStyles"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="@string/CostLabelString"
+            app:layout_constraintStart_toStartOf="@+id/NameLabel"
+            app:layout_constraintTop_toBottomOf="@+id/NameLabel" />
+
+        <TextView
+            android:id="@+id/DescriptionLabel"
+            style="@style/snusLabelStyles"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="@string/StrengthLabelString"
+            app:layout_constraintStart_toStartOf="@+id/CompanyLabel"
+            app:layout_constraintTop_toBottomOf="@+id/CompanyLabel" />
+
+        <TextView
+            android:id="@+id/NamePlaceholder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="@{snusDataVariable.name}"
+            app:layout_constraintBottom_toBottomOf="@+id/NameLabel"
+            app:layout_constraintStart_toEndOf="@+id/NameLabel"
+            app:layout_constraintTop_toTopOf="@+id/NameLabel" />
+
+        <TextView
+            android:id="@+id/TypePlaceholder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="@{snusDataVariable.type}"
+            app:layout_constraintBottom_toBottomOf="@+id/CompanyLabel"
+            app:layout_constraintStart_toEndOf="@+id/CompanyLabel"
+            app:layout_constraintTop_toTopOf="@+id/CompanyLabel" />
+
+        <TextView
+            android:id="@+id/CostPlaceholder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="@{snusDataVariable.cost}"
+            app:layout_constraintBottom_toBottomOf="@+id/SizeLabel"
+            app:layout_constraintStart_toEndOf="@+id/SizeLabel"
+            app:layout_constraintTop_toTopOf="@+id/SizeLabel" />
+
+        <TextView
+            android:id="@+id/StrengthPlaceholder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="@{snusDataVariable.strength}"
+            app:layout_constraintBottom_toBottomOf="@+id/DescriptionLabel"
+            app:layout_constraintStart_toEndOf="@+id/DescriptionLabel"
+            app:layout_constraintTop_toTopOf="@+id/DescriptionLabel" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>

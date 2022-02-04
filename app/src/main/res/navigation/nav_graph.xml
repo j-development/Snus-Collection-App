@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/login_destination">
+
+    <fragment
+        android:id="@+id/login_destination"
+        android:name="android.example.snuscollectorapp.screens.login.LoginFragment"
+        android:label="LoginFragment">
+        <action
+            android:id="@+id/action_login_to_welcome"
+            app:destination="@id/welcome_destination" />
+        <action
+            android:id="@+id/action_login_to_snus"
+            app:destination="@id/snus_destination" />
+    </fragment>
+    <fragment
+        android:id="@+id/welcome_destination"
+        android:name="android.example.snuscollectorapp.screens.welcome.WelcomeFragment"
+        android:label="WelcomeFragment">
+        <action
+            android:id="@+id/action_welcome_to_instruction"
+            app:destination="@id/instruction_destination" />
+    </fragment>
+    <fragment
+        android:id="@+id/instruction_destination"
+        android:name="android.example.snuscollectorapp.screens.instruction.InstructionFragment"
+        android:label="InstructionFragment" >
+        <action
+            android:id="@+id/action_instruction_to_snus"
+            app:destination="@id/snus_destination"
+            app:popUpTo="@id/login_destination" />
+    </fragment>
+    <fragment
+        android:id="@+id/snus_destination"
+        android:name="android.example.snuscollectorapp.screens.snus.SnusFragment"
+        android:label="SnusFragment">
+        <action
+            android:id="@+id/action_snus_to_snus_detail"
+            app:destination="@id/snus_detail_destination" />
+    </fragment>
+    <fragment
+        android:id="@+id/snus_detail_destination"
+        android:name="android.example.snuscollectorapp.screens.snus_detail.SnusDetailFragment"
+        android:label="SnusDetailFragment">
+        <action
+            android:id="@+id/action_snus_detail_to_snus"
+            app:destination="@id/snus_destination" />
+    </fragment>
+</navigation>

@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">Snus Collection App</string>
+    <string name="emailString">Enter Your Email</string>
+    <string name="passwordString">Enter your password</string>
+    <string name="emailHint">Email</string>
+    <string name="passwordHint">Password</string>
+    <string name="createLoginString">Create Login</string>
+    <string name="loginString">Login</string>
+    <string name="welcomeTextOneString">Welcome to the Snus Collector App!</string>
+    <string name="welcomeTextTwoString">Enjoy your visit here, click down below for instructions</string>
+    <string name="welcomeButtonString">Click For Instructions</string>
+    <string name="menuLogoutString">Logout</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="instructionTextTwoString">1. Go to your Snus Collection \n2. Add additional Snus to your impressive Snus Collection!</string>
+    <string name="instructionTextOneString">Instructions</string>
+    <string name="instructionButtonString">Snus Store</string>
+    <string name="snusDetailsnusNameString">Snus Name</string>
+    <string name="snusDetailCompanyString">Company</string>
+    <string name="snusDetailsnusSizeString">snus Size</string>
+    <string name="snusDetailSaveButtonString">Save</string>
+    <string name="snusDetailCancelButtonString">Cancel</string>
+    <string name="NameLabelString">Name:</string>
+    <string name="CompanyLabelString">SnusType:</string>
+    <string name="SizeLabelString">Cost:</string>
+    <string name="DescriptionLabelString">Decription:</string>
+    <string name="StrengthLabelString">Strength</string>
+    <string name="SnusTypeLabelString">Snus Type</string>
+    <string name="CostLabelString">Cost</string>
+    <string name="CostDetailString">Cost</string>
+    <string name="TypeDetailString">Type</string>
+    <string name="StrengthDetailString">Strength</string>
+</resources>
