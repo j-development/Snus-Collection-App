@@ -1,6 +1,5 @@
 package android.example.snuscollectorapp
 
-import android.example.snuscollectorapp.R
 import android.example.snuscollectorapp.databinding.ActivityMainBinding
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -29,9 +28,9 @@ class MainActivity : AppCompatActivity() {
         binding.toolbar.setOnMenuItemClickListener(){item ->
             when(item.itemId)
             {
-                R.id.login_destination -> {
-                    navController.navigateUp()
-
+                R.id.item_logout -> {
+                    navController.navigate(R.id.login_destination)
+                    true
                 }
                 else -> false
             }

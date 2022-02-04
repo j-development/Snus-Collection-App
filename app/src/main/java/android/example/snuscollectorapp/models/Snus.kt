@@ -1,7 +1,7 @@
 package android.example.snuscollectorapp.models
 
 import android.os.Parcelable
-import kotlinx.android.parcel.Parcelize
+import kotlinx.parcelize.Parcelize
 
 @Parcelize
 data class Snus(
@@ -18,8 +18,6 @@ data class Snus(
             Snustype.PORTION.toString() -> type = Snustype.PORTION
         }
     }
-
-
 
     fun getCost(): String {
         return cost.toString()

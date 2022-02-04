@@ -14,27 +14,23 @@ import android.example.snuscollectorapp.models.SnusViewModel
 
 class SnusFragment : Fragment() {
 
-
     private val viewModel: SnusViewModel by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         val binding: FragmentSnusBinding = DataBindingUtil.inflate(
             inflater, R.layout.fragment_snus, container, false)
 
 
-
-        viewModel.snusList.observe(this as LifecycleOwner,{
-            for(Item in viewModel.snusList.value!!){
+        viewModel.snusList.observe(this as LifecycleOwner) {
+            for (Item in viewModel.snusList.value!!) {
                 val snusItemBinding = TemplateSnusItemBinding.inflate(layoutInflater)
                 snusItemBinding.snusDataVariable = Item
                 binding.scrollLayout.addView(snusItemBinding.root)
             }
-        })
-
-
+        }
 
         binding.newSnusButton.setOnClickListener{
             navigateToDetail()

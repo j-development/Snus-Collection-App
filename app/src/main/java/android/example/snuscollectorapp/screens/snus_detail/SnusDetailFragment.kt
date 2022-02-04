@@ -22,7 +22,7 @@ class SnusDetailFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
 
         val binding = FragmentSnusDetailBinding.inflate(inflater, container, false)
 
@@ -36,14 +36,15 @@ class SnusDetailFragment : Fragment() {
         binding.snusDataVariable = snusDataVariable
 
 
-        viewModel.snusState.observe(this as LifecycleOwner, {state ->
-            when(state){
-               SnusState.SAVE -> {
-                   navigateToSnus()
-                   viewModel.onSnusStateActionComplete()
-               }
+        viewModel.snusState.observe(this as LifecycleOwner) { state ->
+            when (state) {
+                SnusState.SAVE -> {
+                    navigateToSnus()
+                    viewModel.onSnusStateActionComplete()
+                }
+                else -> {}
             }
-        })
+        }
 
 
         return binding.root
