@@ -13,7 +13,7 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="instructionTextTwoString">1. Go to your Snus Collection \n2. Add additional Snus to your impressive Snus Collection!</string>
     <string name="instructionTextOneString">Instructions</string>
-    <string name="instructionButtonString">Snus Store</string>
+    <string name="instructionButtonString">Snus Collection</string>
     <string name="snusDetailsnusNameString">Snus Name</string>
     <string name="snusDetailCompanyString">Company</string>
     <string name="snusDetailsnusSizeString">snus Size</string>

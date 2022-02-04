@@ -16,7 +16,7 @@ class SnusDetailFragment : Fragment() {
 
     private val viewModel: SnusViewModel by activityViewModels()
 
-    private val snusDataVariable = Snus("", 0.0, Snustype.PORTION, 1)
+    private val snusDataVariable = Snus("", 0.0, Snustype.PORTION, 0)
 
     override fun onCreateView(
         inflater: LayoutInflater,

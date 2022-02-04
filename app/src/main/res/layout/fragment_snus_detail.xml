@@ -16,39 +16,39 @@
         android:layout_height="match_parent">
 
         <TextView
-            android:id="@+id/snusDetailsnusNameText"
+            android:id="@+id/DetailSnusNameText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/snusDetailsnusNameString"
-            app:layout_constraintBottom_toTopOf="@+id/snusDetailsnusNameInput"
-            app:layout_constraintStart_toStartOf="@+id/snusDetailsnusNameInput" />
+            app:layout_constraintBottom_toTopOf="@+id/DetailSnusNameInput"
+            app:layout_constraintStart_toStartOf="@+id/DetailSnusNameInput" />
 
         <TextView
-            android:id="@+id/snusDetailCompanyText"
+            android:id="@+id/DetailTypeText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/TypeDetailString"
-            app:layout_constraintBottom_toTopOf="@+id/snusDetailCompanyInput"
-            app:layout_constraintStart_toStartOf="@+id/snusDetailCompanyInput" />
+            app:layout_constraintBottom_toTopOf="@+id/DetailTypeInput"
+            app:layout_constraintStart_toStartOf="@+id/DetailTypeInput" />
 
         <TextView
-            android:id="@+id/snusDetailDescriptionText"
+            android:id="@+id/DetailStrengthText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/StrengthDetailString"
-            app:layout_constraintBottom_toTopOf="@+id/snusDetailDescriptionInput"
-            app:layout_constraintStart_toStartOf="@+id/snusDetailDescriptionInput" />
+            app:layout_constraintBottom_toTopOf="@+id/DetailStrengthInput"
+            app:layout_constraintStart_toStartOf="@+id/DetailStrengthInput" />
 
         <TextView
-            android:id="@+id/snusDetailsnusSizeText"
+            android:id="@+id/DetailCostText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/CostDetailString"
-            app:layout_constraintBottom_toTopOf="@+id/snusDetailsnusSizeInput"
-            app:layout_constraintStart_toStartOf="@+id/snusDetailsnusSizeInput" />
+            app:layout_constraintBottom_toTopOf="@+id/DetailCostInput"
+            app:layout_constraintStart_toStartOf="@+id/DetailCostInput" />
 
         <EditText
-            android:id="@+id/snusDetailsnusNameInput"
+            android:id="@+id/DetailSnusNameInput"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -65,7 +65,7 @@
             tools:ignore="SpeakableTextPresentCheck" />
 
         <EditText
-            android:id="@+id/snusDetailCompanyInput"
+            android:id="@+id/DetailTypeInput"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
@@ -77,11 +77,11 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.502"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/snusDetailDescriptionInput"
+            app:layout_constraintTop_toBottomOf="@+id/DetailStrengthInput"
             tools:ignore="SpeakableTextPresentCheck" />
 
         <EditText
-            android:id="@+id/snusDetailDescriptionInput"
+            android:id="@+id/DetailStrengthInput"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
@@ -93,11 +93,11 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/snusDetailsnusNameInput"
+            app:layout_constraintTop_toBottomOf="@+id/DetailSnusNameInput"
             tools:ignore="SpeakableTextPresentCheck" />
 
         <EditText
-            android:id="@+id/snusDetailsnusSizeInput"
+            android:id="@+id/DetailCostInput"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
@@ -109,7 +109,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/snusDetailCompanyInput"
+            app:layout_constraintTop_toBottomOf="@+id/DetailTypeInput"
             tools:ignore="SpeakableTextPresentCheck" />
 
         <Button
@@ -120,16 +120,16 @@
             android:text="@string/snusDetailSaveButtonString"
             app:layout_constraintEnd_toStartOf="@+id/snusDetailCancelButton"
             app:layout_constraintHorizontal_bias="0.029"
-            app:layout_constraintStart_toStartOf="@+id/snusDetailsnusSizeInput"
+            app:layout_constraintStart_toStartOf="@+id/DetailCostInput"
             android:onClick="@{() -> snusViewModel.onSnusSave(snusDataVariable.name, snusDataVariable.cost, snusDataVariable.type, snusDataVariable.strength)}"
-            app:layout_constraintTop_toBottomOf="@+id/snusDetailsnusSizeInput" />
+            app:layout_constraintTop_toBottomOf="@+id/DetailCostInput" />
 
         <Button
             android:id="@+id/snusDetailCancelButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/snusDetailCancelButtonString"
-            app:layout_constraintEnd_toEndOf="@+id/snusDetailsnusSizeInput"
+            app:layout_constraintEnd_toEndOf="@+id/DetailCostInput"
             app:layout_constraintTop_toTopOf="@+id/snusDetailSaveButton" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

@@ -24,7 +24,7 @@ class SnusViewModel : ViewModel() {
     init {
         _snusList.value = mutableListOf()
         addNewSnus(
-            "Göteborgs Rapé",
+            "General",
             43.0,
             "PORTION",
             "5"
@@ -35,28 +35,28 @@ class SnusViewModel : ViewModel() {
     private fun addNewSnus(
         Name: String,
         Size: Double,
-        Company: String,
+        Type: String,
         Description: String
     ) {
-        var company: Snustype = Snustype.PORTION
-        when(Company){
-            Snustype.LOOSE.toString() -> company = Snustype.LOOSE
-            Snustype.WHITEPORTION.toString() -> company = Snustype.WHITEPORTION
-            Snustype.PORTION.toString() -> company = Snustype.PORTION
+        var type: Snustype = Snustype.PORTION
+        when(Type){
+            Snustype.LOOSE.toString() -> type = Snustype.LOOSE
+            Snustype.WHITEPORTION.toString() -> type = Snustype.WHITEPORTION
+            Snustype.PORTION.toString() -> type = Snustype.PORTION
         }
-        _snusList.value?.add(Snus(Name, Size, company, Description.toInt()))
+        _snusList.value?.add(Snus(Name, Size, type, Description.toInt()))
     }
 
-    fun onSnusSave(name: String, size: String, company: String, description: String) {
+    fun onSnusSave(name: String, size: String, type: String, description: String) {
         var sizeToDouble: Double = 0.0
         try {
             sizeToDouble = size.toDouble()
 
         }
         catch (e: NumberFormatException){
-            Timber.i("Invalid size for snus")
+            Timber.i("Invalid snus")
         }
-        addNewSnus(name,sizeToDouble,company,description)
+        addNewSnus(name,sizeToDouble,type,description)
 
         _snusState.value = SnusState.SAVE
     }
